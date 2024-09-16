@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #000000fb, transparent), linear-gradient(to bottom, #f8f8f8f6, transparent);
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.actor-profile {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.actor-image {
+    margin-top: 30px;
+    width:70px;
+    height: 60px;
+    border-radius: 60px;
+    object-fit: cover;
+    border-right: 1px solid #000000;
+    cursor: pointer;
+}
+
+.actor-details {
+    padding: 20px;
+    
+}
+
+.actor-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.actor-birthyear,
+.actor-awards,
+.actor-deathyear,
+.actor-nationality,
+.actor-biography,
+.actor-knownfor {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.actor-biography {
+    margin-top: 12px;
+}
+
+strong {
+    color: hsl(0, 0%, 20%);
+}
+
+.view-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.view-image .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.view-image .full-size-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+.er {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+   
+}

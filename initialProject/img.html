@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>/* styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .slider {
+            position: relative;
+            height: 500px;
+            width: 500px;
+            max-width: 800px;
+            overflow: hidden;
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            
+        }
+        
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            object-fit: fill;
+        }
+        
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }</style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="image/tangled-movie-poster-wallpaper.jpg" alt="Image 1" class="slide">
+            <img src="image/1304925.jpg" alt="Image 2" class="slide">
+            <img src="image/mufasa-the-lion-king-poster.webp" alt="Image 3" class="slide">
+        </div>
+        <button id="prevBtn" class="nav-btn prev">Previous</button>
+        <button id="nextBtn" class="nav-btn next">Next</button>
+    </div>
+    <script>
+        let slider = document.querySelector(".slides")
+        let img = document.querySelectorAll(".slide")
+        let nextBtn = document.querySelector("#nextBtn")
+        let prevBtn = document.querySelector("#prevBtn")
+        let currentIndex = 0;
+        let show = (index) => {
+            const slideWidth = img[0].clientWidth;
+            slider.style.transform = `translateX(${-index * slideWidth}px)`
+        }
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1)% img.length;
+            show(currentIndex);
+
+        })
+        
+        prevBtn.addEventListener("click", ()=> {
+            currentIndex = (currentIndex -1 + img.length)% img.length;
+            show(currentIndex);
+        })
+    </script>
+</body>
+
+</html>

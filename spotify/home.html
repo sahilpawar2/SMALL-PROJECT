@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Spotify</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="What do you want to play?">
+        </div>
+        <div class="profile">
+            <div class="profile-pic">S</div>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">Search</div>
+        <div class="nav-item">Your Library</div>
+    </div>
+
+    <main class="main-content">
+        <div class="image-slider">
+            <button class="prev">&#10094;</button>
+            <div class="slides-container">
+                <section class="playlist-info">
+                    <img src="image/tangled-movie-poster-wallpaper.jpg" alt="Top Trending India" class="playlist-image">
+                    <div class="playlist-details">
+                        <h2>Top Trending India | English Vibes</h2>
+                        <p>Listen to hits like Espresso, Not Like Us, Summertime Sadness, right here!</p>
+                        <button class="play-button">Play</button>
+                        <button class="follow-button">Follow</button>
+                    </div>
+                </section>
+                <section class="playlist-info">
+                    <img src="image/1304925.jpg" alt="Top Trending India" class="playlist-image">
+                    <div class="playlist-details">
+                        <h2>Top Trending US | English Vibes</h2>
+                        <p>Listen to hits like Espresso, Not Like Us, Summertime Sadness, right here!</p>
+                        <button class="play-button">Play</button>
+                        <button class="follow-button">Follow</button>
+                    </div>
+                </section>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+        <section class="songs">
+            <div class="song-item">Liked Songs</div>
+            <div class="song-item">Munjya (Original Motion Picture)</div>
+            <div class="song-item">Tainu Khabar Nahi (From "Munjya")</div>
+            <div class="song-item">Anirudh Ravichander</div>
+            <div class="song-item">Tu Hai Champion (From "Chandru...")</div>
+            <div class="song-item">This Is Coke Studio Pakistan</div>
+            <div class="song-item">Kedarnath (Original Motion Picture)</div>
+            <div class="song-item">Kai Po Che (Original Motion Picture)</div>
+        </section>
+        
+    </main>
+
+    <div id="au">
+        <audio class="audio">
+        <source src="audio/Mandy Moore, Zachary Levi - I See the Light (From TangledSing-Along).mp3" type="audio/ogg">
+        <audio class="audio">
+          <source src="audio/Home_Free_-_Try_Everything_CeeNaija.com_.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+      </audio></div>
+    
+    <footer class="footer">
+        <div class="currently-playing">
+            <p>Hai Jamalo - From "Munjya"</p>
+            <span>0:23</span>
+        </div>
+        <div class="controls">
+            <button>◄◄</button>
+            <button>▶</button>
+            <button>►►</button>
+        </div>
+        <div class="volume">
+            <input type="range" min="0" max="100" value="50">
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
